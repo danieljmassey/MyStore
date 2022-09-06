@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="index" *ngFor="let product of products">
+    <ul>
+      <li>{{ product.id }}</li>
+      <li>{{ product.name }}</li>
+      <li>{{ product.price }}</li>
+      <a href="{{ product.url }}"></a>
+      <li>{{ product.description }}</li>
+    </ul>
+  </div>
+</div>
