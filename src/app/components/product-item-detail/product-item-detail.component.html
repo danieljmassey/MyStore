@@ -1,0 +1,18 @@
+<div class="detail-container">
+  <div>
+    <img class="img" src="{{ product.url }}" alt="{{ product.name }}" />
+  </div>
+  <div class="detail-item">
+    <h3>{{ product.name }}</h3>
+    <p>{{ product.description }}</p>
+    <p>${{ product.price }}</p>
+    <select class="select-input" id="qty">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <button class="select-input">Add to cart</button>
+  </div>
+</div>

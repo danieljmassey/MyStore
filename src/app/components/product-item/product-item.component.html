@@ -1,6 +1,15 @@
 <div class="product-container">
-  <h3>{{ product.name }}</h3>
-  <img class="product-image" src="{{ product.url }}" />
-  <p>{{ product.price }}</p>
-  <p>{{ product.description }}</p>
+  <a [routerLink]="['/product', product.id]">
+    <img class="product-image" src="{{ product.url }}" />
+  </a>
+  <p>{{ product.name }}</p>
+  <p>${{ product.price }}</p>
+  <select class="select-input" id="qty">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+  <button class="select-input">Add to cart</button>
 </div>
