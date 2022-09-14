@@ -1,4 +1,5 @@
 <app-checkout-item
-  *ngFor="let cartProduct of order.prodArr"
+  *ngFor="let cartProduct of prodArr"
   [cartProduct]="cartProduct"
+  class="cart-item"
 ></app-checkout-item>

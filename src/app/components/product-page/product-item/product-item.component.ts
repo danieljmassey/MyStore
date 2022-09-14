@@ -1,6 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { cartProduct } from 'src/app/models/cartProduct';
 import { Product } from 'src/app/models/product';
-import { ProductPageComponent } from '../product-page.component';
 
 @Component({
   selector: 'app-product-item',
@@ -9,6 +9,7 @@ import { ProductPageComponent } from '../product-page.component';
 })
 export class ProductItemComponent implements OnInit {
   @Input() product: Product;
+  cartProduct: cartProduct = { productID: 0, qty: 0 };
   constructor() {
     this.product = {
       id: 0,

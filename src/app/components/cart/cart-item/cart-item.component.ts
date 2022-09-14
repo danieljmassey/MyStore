@@ -9,11 +9,13 @@ import { cartProduct } from 'src/app/models/cartProduct';
   styleUrls: ['./cart-item.component.css'],
 })
 export class CartItemComponent implements OnInit {
-  order: Order = new Order();
+  prodArr: cartProduct[] = [];
 
   constructor(private cartService: CartService) {}
 
   ngOnInit(): void {
-    this.order = this.cartService.getOrder();
+    this.cartService.getProdArr().subscribe((res) => {
+      this.prodArr = res;
+    });
   }
 }

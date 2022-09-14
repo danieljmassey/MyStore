@@ -1,0 +1,11 @@
+<div>
+  <select class="select-input" id="qty" [(ngModel)]="btnQty">
+    <option
+      *ngFor="let quantity of possibleQty; index as i"
+      [ngValue]="quantity"
+    >
+      {{ possibleQty[i] }}
+    </option>
+  </select>
+  <button class="select-input" (click)="updateOrder()">Add to cart</button>
+</div>

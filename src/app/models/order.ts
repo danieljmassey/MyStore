@@ -1,4 +1,3 @@
-import { Product } from './product';
 import { cartProduct } from './cartProduct';
 export class Order {
   prodArr: cartProduct[];
