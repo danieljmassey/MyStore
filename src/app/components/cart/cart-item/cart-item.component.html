@@ -1,9 +1,11 @@
-<div class="cart-item">
-  <div>
-    <p>{{ total }}</p>
-  </div>
+<div class="cart-container">
   <app-checkout-item
     *ngFor="let cartProduct of prodArr"
     [cartProduct]="cartProduct"
+    class="cart-item-details"
   ></app-checkout-item>
+</div>
+
+<div class="total">
+  <app-total></app-total>
 </div>

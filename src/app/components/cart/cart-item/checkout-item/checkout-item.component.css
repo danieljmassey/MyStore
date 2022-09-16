@@ -11,14 +11,14 @@ img {
   display: flex;
   flex-direction: row;
   margin-bottom: 20px;
+  border-style: dashed;
 }
 
 .cart-item-details {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: left;
+  flex-direction: row;
   align-items: left;
-  margin-left: 80px;
 }
 
 .number-input {
@@ -28,18 +28,20 @@ img {
 
 .cart-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   margin-top: 64px;
-}
-
-.cart-panel {
-  margin-left: 50px;
-  margin-right: 50px;
+  border-style: solid;
 }
 
 .empty-cart-message {
   display: flex;
   justify-content: center;
   margin-top: 64px;
+}
+
+.total {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
 }

@@ -1,8 +1,11 @@
-<div class="cart-container">
-  <div class="cart-panel">
-    <app-cart-item></app-cart-item>
-  </div>
-  <div class="form-margin">
-    <app-checkout-form></app-checkout-form>
-  </div>
-</div>
+<div *ngIf="prodArr.length === 0; else elseBlock">Your cart is empty</div>
+
+<ng-template #elseBlock
+  ><div class="cart-container">
+    <div class="cart-panel">
+      <app-cart-item></app-cart-item>
+    </div>
+    <div class="form-margin">
+      <app-checkout-form></app-checkout-form>
+    </div></div
+></ng-template>

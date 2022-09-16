@@ -1,6 +1,5 @@
-import { Injectable, Output, EventEmitter } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { cartProduct } from '../models/cartProduct';
-import { Product } from '../models/product';
 import { Order } from '../models/order';
 import { Observable, of } from 'rxjs';
 
