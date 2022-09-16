@@ -1,4 +1,7 @@
 <div class="cart-item">
+  <div>
+    <p>{{ total }}</p>
+  </div>
   <app-checkout-item
     *ngFor="let cartProduct of prodArr"
     [cartProduct]="cartProduct"

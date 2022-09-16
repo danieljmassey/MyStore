@@ -9,7 +9,6 @@ import { Observable, of } from 'rxjs';
 })
 export class CartService {
   order: Order = new Order();
-  products: Product[] = [];
 
   constructor() {}
   getProdArr(): Observable<cartProduct[]> {
@@ -37,5 +36,10 @@ export class CartService {
   //   this.order.prodArr = updatedOrder;
   // }
 
-  getTotal(): void {}
+  getTotal(): Observable<number> {
+    this.order.prodArr.forEach((item) => {
+      this.order.total += item.product.price * item.qty;
+    });
+    return of(this.order.total);
+  }
 }

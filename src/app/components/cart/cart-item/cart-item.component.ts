@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Order } from 'src/app/models/order';
 import { CartService } from 'src/app/services/cart.service';
 import { cartProduct } from 'src/app/models/cartProduct';
 
@@ -9,12 +10,16 @@ import { cartProduct } from 'src/app/models/cartProduct';
 })
 export class CartItemComponent implements OnInit {
   prodArr: cartProduct[] = [];
+  total: number = 0;
 
   constructor(private cartService: CartService) {}
 
   ngOnInit(): void {
     this.cartService.getProdArr().subscribe((res) => {
       this.prodArr = res;
+    });
+    this.cartService.getTotal().subscribe((res) => {
+      this.total = res;
     });
   }
 }

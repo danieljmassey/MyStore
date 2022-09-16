@@ -8,7 +8,10 @@ import { Order } from 'src/app/models/order';
   styleUrls: ['./cart.component.css'],
 })
 export class CartComponent implements OnInit {
-  constructor() {}
+  total: number = 0;
+  constructor(private cartService: CartService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.cartService.getTotal().subscribe((res) => (this.total = res));
+  }
 }
