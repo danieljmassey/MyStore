@@ -1,11 +1,4 @@
-import {
-  Component,
-  OnInit,
-  OnChanges,
-  Input,
-  NgModule,
-  SimpleChanges,
-} from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { cartProduct } from 'src/app/models/cartProduct';
 import { Product } from 'src/app/models/product';
 import { CartService } from 'src/app/services/cart.service';
@@ -16,25 +9,20 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./cart-button.component.css'],
 })
 export class CartButtonComponent implements OnInit {
-  @Input() product: Product = {
-    id: 0,
-    name: '',
-    price: 0,
-    url: '',
-    description: '',
-  };
+  @Input() product: Product = new Product();
   possibleQty = [0, 1, 2, 3, 4, 5];
   btnQty = 0;
-  cartProduct: cartProduct = { productID: 0, qty: 0 };
+  cartProduct: cartProduct = new cartProduct();
   constructor(private cartService: CartService) {}
 
   ngOnInit(): void {}
 
   async updateOrder(): Promise<void> {
     try {
-      this.cartProduct.productID = this.product.id;
+      this.cartProduct.product = this.product;
       this.cartProduct.qty = this.btnQty;
       this.cartService.updateOrder(this.cartProduct);
+      alert('Product(s) added to cart!');
     } catch (err) {
       throw new Error(`{$err}`);
     }

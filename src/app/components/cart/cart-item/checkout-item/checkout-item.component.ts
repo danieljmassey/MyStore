@@ -7,7 +7,7 @@ import { cartProduct } from 'src/app/models/cartProduct';
   styleUrls: ['./checkout-item.component.css'],
 })
 export class CheckoutItemComponent implements OnInit {
-  @Input() cartProduct: cartProduct = { productID: 0, qty: 0 };
+  @Input() cartProduct: cartProduct = new cartProduct();
 
   constructor() {}
 

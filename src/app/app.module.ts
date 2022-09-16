@@ -13,6 +13,7 @@ import { CheckoutItemComponent } from './components/cart/cart-item/checkout-item
 import { FormsModule } from '@angular/forms';
 import { CheckoutFormComponent } from './components/cart/checkout-form/checkout-form.component';
 import { CartButtonComponent } from './components/cart-button/cart-button.component';
+import { TotalComponent } from './components/cart/cart-item/total/total.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { CartButtonComponent } from './components/cart-button/cart-button.compon
     CheckoutItemComponent,
     CheckoutFormComponent,
     CartButtonComponent,
+    TotalComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

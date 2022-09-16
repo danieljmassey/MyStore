@@ -8,10 +8,8 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root',
 })
 export class CartService {
-  order: Order = {
-    prodArr: [{ productID: 0, qty: 0 }],
-    total: 0,
-  };
+  order: Order = new Order();
+  products: Product[] = [];
 
   constructor() {}
   getProdArr(): Observable<cartProduct[]> {
@@ -20,7 +18,7 @@ export class CartService {
 
   updateOrder(req: cartProduct) {
     const found = this.order.prodArr.findIndex(
-      (item) => item.productID === req.productID
+      (item) => item.product.id === req.product.id
     );
     if (found === -1) {
       this.order.prodArr.unshift(req);
@@ -28,6 +26,16 @@ export class CartService {
       this.order.prodArr[found].qty = req.qty;
     }
   }
+  //   const updatedOrder = this.order.prodArr.map((item) => {
+  //     if (item.product.id === req.product.id) {
+  //       item.qty = req.qty;
+  //     }
+
+  //     return item;
+  //   });
+
+  //   this.order.prodArr = updatedOrder;
+  // }
 
   getTotal(): void {}
 }

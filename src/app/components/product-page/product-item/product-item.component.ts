@@ -9,7 +9,7 @@ import { Product } from 'src/app/models/product';
 })
 export class ProductItemComponent implements OnInit {
   @Input() product: Product;
-  cartProduct: cartProduct = { productID: 0, qty: 0 };
+  cartProduct: cartProduct = new cartProduct();
   constructor() {
     this.product = {
       id: 0,
