@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
 
+This project was created for the Udacity course: Angular Fundementals, as a module in the Full-Stack Javascript Developer nanodegree.
+
+MyStore is a simple, single page e-commerce application meant to showcase the performance and modularity of the Angular Framework.
+
 ## Usage
 
 After successfully cloning the repository, navigate into the MyStore folder and run `npm install` to initialize dependencies.
