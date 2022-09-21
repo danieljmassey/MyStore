@@ -12,6 +12,6 @@ export class TotalComponent implements OnInit {
   constructor(private cartService: CartService) {}
 
   ngOnInit(): void {
-    this.cartService.getTotal().subscribe((res) => (this.total = res));
+    this.cartService.totalChanges.subscribe((res) => (this.total = res));
   }
 }

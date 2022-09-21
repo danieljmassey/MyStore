@@ -1,0 +1,25 @@
+.cart-item-details {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  padding: auto;
+  margin: auto;
+}
+
+.button {
+  border: 1px solid rgba(0, 0, 0, 15%);
+  border-radius: 10%;
+  background-color: transparent;
+  font-family: inherit;
+  cursor: pointer;
+  height: fit-content;
+  width: fit-content;
+  margin-top: auto;
+  padding: 0;
+}
+
+.p {
+  margin: 0;
+  padding: auto;
+  justify-content: space-evenly;
+}

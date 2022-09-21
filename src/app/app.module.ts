@@ -8,13 +8,11 @@ import { ProductItemComponent } from './components/product-page/product-item/pro
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ProductItemDetailComponent } from './components/product-page/product-item/product-item-detail/product-item-detail.component';
 import { CartComponent } from './components/cart/cart.component';
-import { CartItemComponent } from './components/cart/cart-item/cart-item.component';
-import { CheckoutItemComponent } from './components/cart/cart-item/checkout-item/checkout-item.component';
+import { CheckoutItemComponent } from './components/cart/checkout-item/checkout-item.component';
 import { FormsModule } from '@angular/forms';
-import { CheckoutFormComponent } from './components/cart/checkout-form/checkout-form.component';
 import { CartButtonComponent } from './components/cart-button/cart-button.component';
-import { TotalComponent } from './components/cart/cart-item/total/total.component';
-import { CheckoutComponent } from './components/checkout/checkout.component';
+import { TotalComponent } from './components/cart/total/total.component';
+import { CheckoutFormComponent } from './components/cart/checkout-form/checkout-form.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +21,12 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     ProductPageComponent,
     ProductItemComponent,
     NavBarComponent,
-    ProductItemDetailComponent,
     CartComponent,
-    CartItemComponent,
-    CheckoutItemComponent,
-    CheckoutFormComponent,
+    ProductItemDetailComponent,
     CartButtonComponent,
     TotalComponent,
-    CheckoutComponent,
+    CheckoutFormComponent,
+    CheckoutItemComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

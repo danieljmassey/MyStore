@@ -1,23 +1,34 @@
-<form>
-  <h1>Checkout</h1>
+<form #form="ngForm" (ngSubmit)="onSubmit()">
   <input
     type="text"
     name="Name"
-    placeholder="Enter your first and last name"
+    required
+    minlength="2"
+    placeholder="Enter Name"
     [(ngModel)]="name"
   />
   <br />
-  <input
-    type="text"
-    name="Address"
-    placeholder="Enter shipping address"
-    [(ngModel)]="address"
-  />
   <br />
   <input
     type="text"
-    name="Credit Card"
-    placeholder="Enter your credit card number"
+    name="Confirmation Email"
+    required
+    minlength="8"
+    placeholder="Enter email address"
+    [(ngModel)]="email"
+  />
+  <br />
+  <br />
+  <input
+    type="text"
+    name="Credit Card Number"
+    required
+    minlength="16"
+    maxlength="16"
+    placeholder="Enter CC number"
     [(ngModel)]="ccNum"
   />
+  <br />
+  <br />
+  <input type="submit" [disabled]="form.invalid" value="Submit Order" />
 </form>

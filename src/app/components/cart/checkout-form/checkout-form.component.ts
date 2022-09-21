@@ -6,11 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./checkout-form.component.css'],
 })
 export class CheckoutFormComponent implements OnInit {
-  name = '';
-  address = '';
-  ccNum = 0;
-
+  name: string = '';
+  email: string = '';
+  ccNum: string = '';
   constructor() {}
 
   ngOnInit(): void {}
+
+  onSubmit(): void {
+    alert(`Order Placed for ${this.name}`);
+  }
 }

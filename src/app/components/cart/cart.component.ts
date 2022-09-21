@@ -9,9 +9,14 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class CartComponent implements OnInit {
   prodArr: cartProduct[] = [];
+
   constructor(private cartService: CartService) {}
 
   ngOnInit(): void {
-    this.cartService.getProdArr().subscribe((res) => (this.prodArr = res));
+    this.cartService.cartChanges.subscribe((res) => (this.prodArr = res));
+  }
+
+  removeFromCart(toRemove: cartProduct): void {
+    this.cartService.removeProduct(toRemove);
   }
 }

@@ -1,0 +1,9 @@
+<div class="cart-item-details">
+  <p class="p">{{ cartProduct.product.name }}</p>
+  &nbsp;
+  <p class="p">${{ cartProduct.product.price }}</p>
+  &nbsp;
+  <p class="p">Quantity: {{ cartProduct.qty }}</p>
+  <br />
+  <button (click)="removeProduct()" class="button">&nbsp;Remove</button>
+</div>

@@ -1,11 +1,24 @@
-<div *ngIf="prodArr.length === 0; else elseBlock">Your cart is empty</div>
+<div class="cart-container">
+  <div *ngIf="prodArr.length === 0; else elseBlock" class="empty-cart-message">
+    Your cart is empty
+  </div>
 
-<ng-template #elseBlock
-  ><div class="cart-container">
+  <ng-template #elseBlock>
     <div class="cart-panel">
-      <app-cart-item></app-cart-item>
+      <h3 class="h">Shopping Cart</h3>
+      <app-checkout-item
+        *ngFor="let cartProduct of prodArr"
+        [cartProduct]="cartProduct"
+        (toRemove)="removeFromCart($event)"
+        class="cart-item"
+      ></app-checkout-item>
+      <div class="total">
+        <app-total></app-total>
+      </div>
     </div>
-    <div class="form-margin">
-      <app-checkout-form></app-checkout-form>
-    </div></div
-></ng-template>
+    <div class="cart-panel">
+      <h3 class="h">Checkout</h3>
+      <app-checkout-form class="form-margin"></app-checkout-form>
+    </div>
+  </ng-template>
+</div>
