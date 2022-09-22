@@ -27,6 +27,7 @@
     maxlength="16"
     placeholder="Enter CC number"
     [(ngModel)]="ccNum"
+    (ngModelChange)="validateCC()"
   />
   <br />
   <br />

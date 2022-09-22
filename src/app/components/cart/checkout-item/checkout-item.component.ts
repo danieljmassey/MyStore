@@ -16,5 +16,6 @@ export class CheckoutItemComponent implements OnInit {
 
   removeProduct(): void {
     this.toRemove.emit(this.cartProduct);
+    alert('Removed from Cart');
   }
 }
