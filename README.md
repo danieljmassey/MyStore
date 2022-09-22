@@ -6,6 +6,18 @@ This project was created for the Udacity course: Angular Fundementals, as a modu
 
 MyStore is a simple, single page e-commerce application meant to showcase the performance and modularity of the Angular Framework.
 
+## Layout
+
+This single page application is composed of 4 distinct views: <br>
+
+1.  The Landing View (products-page): dynamically imports the available products using an API call to our "backend" (data.json in this case)
+2.  Detailed Product View: Access by clicking the image of any single product, shows the detailed view of the selected product, including product description. <br>
+    2a. Both product views support the "add to cart" functionality view the "Add to Cart" button. <br>
+
+3.  Shopping Cart View: accessed via the navigation bar, displays an empty cart message when appropriate. Shows the product, quantity and price of products within the cart, including a running total. The shopping cart view also houses the checkout form.
+4.  Order Confirmation Page: accessed after successfully submitting the checkout form, shows the results of the successfully placed order.
+    <br>
+
 ## Usage
 
 After successfully cloning the repository, navigate into the MyStore folder and run `npm install` to initialize dependencies.
