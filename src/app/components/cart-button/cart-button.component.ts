@@ -11,7 +11,7 @@ import { CartService } from 'src/app/services/cart.service';
 export class CartButtonComponent implements OnInit {
   @Input() product: Product = new Product();
   possibleQty = [1, 2, 3, 4, 5];
-  btnQty = 0;
+  btnQty = 1;
   cartProduct: cartProduct = new cartProduct();
   constructor(private cartService: CartService) {}
 

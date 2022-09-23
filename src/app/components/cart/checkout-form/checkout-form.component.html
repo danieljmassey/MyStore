@@ -3,9 +3,10 @@
     type="text"
     name="Name"
     required
-    minlength="2"
+    minlength="4"
     placeholder="Enter Name"
     [(ngModel)]="name"
+    (ngModelChange)="validateName()"
   />
   <br />
   <br />
@@ -16,6 +17,7 @@
     minlength="8"
     placeholder="Enter email address"
     [(ngModel)]="email"
+    (ngModelChange)="validateEmail()"
   />
   <br />
   <br />
